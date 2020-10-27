@@ -31,13 +31,14 @@ const Landing = () => {
 		});
 		return results.slice(arr, ln);
 	};
+	
 
-    if(switchView) return <Quiz data={tenQuestions} />;
+	if (switchView) return <Quiz data={tenQuestions} />;
 
-	return ( 
+	return (
 		<Fragment>
 			<h2>To get started click button below</h2>
-			<Button text='Get Started' fn={getTenQuestion} />			
+			<Button text='Get Started' fn={getTenQuestion} />
 		</Fragment>
 	);
 };

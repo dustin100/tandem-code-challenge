@@ -46,7 +46,7 @@ We would also like to see a README which includes any information about how to r
 - We will provide you with the trivia data such as the questions, correct and incorrect answers via a JSON file.
 
 
-Acceptance Criteria
+### Acceptance Criteria
 - A user can view questions.
 - Questions with their multiple choice options must be displayed one at a time.  
 - Questions should not repeat in a round.

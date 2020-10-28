@@ -32,6 +32,7 @@ const Quiz = ({ data }) => {
 
 	if (currentQuestion > data.length - 1) return <Scoreboard score={score} />;
 
+	// reveals to the user if they're right or wrong
 	const reveal = userIsCorrect ? (
 		<Fragment>
 			<p className='correct'>

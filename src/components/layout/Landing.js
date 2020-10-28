@@ -15,7 +15,7 @@ const Landing = () => {
 		const reformatQuestions = tenQ.map((q) => {
 			return {
 				question: q.question,
-				answers: shuffle([...q.incorrect, q.correct], 4),
+				choices: shuffle([...q.incorrect, q.correct], 4),
 				correct: q.correct,
 			};
 		});

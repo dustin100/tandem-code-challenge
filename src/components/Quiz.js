@@ -47,8 +47,8 @@ const Quiz = ({ data }) => {
 		</Fragment>
 	);
 
-	// map though the answers
-	const answersKey = data[currentQuestion].answers.map((item) => {
+	// map though the choices
+	const answersKey = data[currentQuestion].choices.map((item) => {
 		return (
 			<Button
 				key={item}
@@ -62,7 +62,7 @@ const Quiz = ({ data }) => {
 	return (
 		<div className='quiz'>
 			<p className='question'>{data[currentQuestion].question}</p>
-			<div className='answers'>{answersKey}</div>
+			<div className='choices'>{answersKey}</div>
 			{madeChoice && reveal}
 			<Button text='next' disabled={!madeChoice} fn={nextQuestion} />
 		</div>

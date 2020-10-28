@@ -6,16 +6,17 @@ import Quiz from '../Quiz';
 const Landing = () => {
 	const [tenQuestions, setTenQuestions] = useState(null);
 	const [switchView, setSwitchView] = useState(false);
+	const initialData = [...questions];
 
 	const getTenQuestion = () => {
 		// grab 10 questions from the the json file
-		const tenQ = shuffle(questions, 10);
+		const tenQ = getRandom(initialData, 10);
 
 		// reformat the question objects in an easier to use format while also shuffling the answer key
 		const reformatQuestions = tenQ.map((q) => {
 			return {
 				question: q.question,
-				choices: shuffle([...q.incorrect, q.correct], 4),
+				choices: getRandom([...q.incorrect, q.correct], 4),
 				correct: q.correct,
 			};
 		});
@@ -24,14 +25,22 @@ const Landing = () => {
 		setSwitchView(true);
 	};
 
-	// shuffle helper function
-	const shuffle = (arr, ln) => {
-		const results = arr.sort(() => {
-			return 0.5 - Math.random();
-		});
-		return results.slice(arr, ln);
-	};
+	// my shuffle function didn't work that well and I found this one from stack overflow which did a much better job. I modified it slightly for my needs 
+		// https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array/38571132#38571132
 	
+	
+	const getRandom = (arr, n) => {
+		let result = new Array(n),
+			len = arr.length,
+			taken = new Array(len);
+		if (n > len) n = len;
+		while (n--) {
+			let x = Math.floor(Math.random() * len);
+			result[n] = arr[x in taken ? taken[x] : x];
+			taken[x] = --len in taken ? taken[len] : len;
+		}
+		return result;
+	};
 
 	if (switchView) return <Quiz data={tenQuestions} />;
 

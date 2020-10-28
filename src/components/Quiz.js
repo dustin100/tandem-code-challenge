@@ -64,7 +64,7 @@ const Quiz = ({ data }) => {
 			<p className='question'>{data[currentQuestion].question}</p>
 			<div className='choices'>{answersKey}</div>
 			{madeChoice && reveal}
-			<Button text='next' disabled={!madeChoice} fn={nextQuestion} />
+			<Button text='next question' disabled={!madeChoice} fn={nextQuestion} />
 		</div>
 	);
 };

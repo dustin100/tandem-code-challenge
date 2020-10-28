@@ -74,7 +74,7 @@ p i {
 .btn:disabled,
 .btn:disabled:hover {
 	color: #000;
-	opacity: 40%;
+	opacity: 0.4;
 	cursor: not-allowed;
 	background: #e4f2e4;
 	border-color: #2c4023;

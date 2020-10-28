@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import Button from '../components/layout/Button';
-import Scoreboard from '../components/Scoreboard';
+import Scoreboard from './ScoreCard';
 
 const Quiz = ({ data }) => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -30,17 +30,22 @@ const Quiz = ({ data }) => {
 		}
 	};
 
+	if (currentQuestion > data.length - 1) return <Scoreboard score={score} />;
+
 	const reveal = userIsCorrect ? (
 		<Fragment>
-			<p>You're right</p>
+			<p className='correct'>
+				<i class='far fa-check-circle'></i> Correct
+			</p>
 		</Fragment>
 	) : (
 		<Fragment>
-			<p>you're wrong the correct answer is {data[currentQuestion].correct}</p>
+			<p className='incorrect'>
+				<i class='far fa-times-circle'></i>
+				{data[currentQuestion].correct}
+			</p>
 		</Fragment>
 	);
-
-	if (currentQuestion > data.length - 1) return <Scoreboard score={score} />;
 
 	// map though the answers
 	const answersKey = data[currentQuestion].answers.map((item) => {
@@ -55,9 +60,9 @@ const Quiz = ({ data }) => {
 	});
 
 	return (
-		<div>
-			<p>{data[currentQuestion].question}</p>
-			{answersKey}
+		<div className='quiz'>
+			<p className='question'>{data[currentQuestion].question}</p>
+			<div className='answers'>{answersKey}</div>
 			{madeChoice && reveal}
 			<Button text='next' disabled={!madeChoice} fn={nextQuestion} />
 		</div>

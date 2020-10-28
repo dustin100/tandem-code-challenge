@@ -2,6 +2,12 @@
 	text-align: center;
 }
 
+.wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+	width: 95%;
+}
+
 header {
 	background: #fff4e6;
 	color: #717244;

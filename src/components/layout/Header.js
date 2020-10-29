@@ -1,8 +1,8 @@
 const Header = () => {
 	return (
-		<header>
+		<header data-test='component-header'>
 			<div className='wrapper'>
-				<h1>Dustin Kelly's Tandem Code Challenge</h1>
+				<h1 data-test='title-message'>Dustin Kelly's Tandem Code Challenge</h1>
 			</div>
 		</header>
 	);

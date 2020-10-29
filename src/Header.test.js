@@ -1,10 +1,7 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import { findByTestAttr } from './test/testUtils';
 import Header from './components/layout/Header';
-
-Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 /**
  * Factory function to create a ShallowWrapper for the Header component.
@@ -22,5 +19,3 @@ test('renders without error', () => {
 	const component = findByTestAttr(wrapper, 'component-header');
 	expect(component.length).toBe(1);
 });
-
-

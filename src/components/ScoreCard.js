@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
 import Button from '../components/layout/Button';
-import Landing from '../components/layout/Landing';
-const Scoreboard = ({ score, getTenQuestion }) => {
-	
-
+const Scoreboard = ({ score }) => {
 	return (
 		<section>
 			<div className='scoreCard'>

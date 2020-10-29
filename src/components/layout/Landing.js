@@ -42,7 +42,7 @@ const Landing = () => {
 		return result;
 	};
 
-	if (switchView) return <Quiz data={tenQuestions} />;
+	if (switchView) return <Quiz getTenQuestion={getTenQuestion} data={tenQuestions} />;
 
 	return (
 		<Fragment>

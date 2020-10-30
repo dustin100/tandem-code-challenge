@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tandem-code-challenge/static/css/main.e5cadfb8.chunk.css",
-    "main.js": "/tandem-code-challenge/static/js/main.8f48a300.chunk.js",
-    "main.js.map": "/tandem-code-challenge/static/js/main.8f48a300.chunk.js.map",
+    "main.css": "/tandem-code-challenge/static/css/main.b2ddf5ea.chunk.css",
+    "main.js": "/tandem-code-challenge/static/js/main.51bb9095.chunk.js",
+    "main.js.map": "/tandem-code-challenge/static/js/main.51bb9095.chunk.js.map",
     "runtime-main.js": "/tandem-code-challenge/static/js/runtime-main.ad138a47.js",
     "runtime-main.js.map": "/tandem-code-challenge/static/js/runtime-main.ad138a47.js.map",
     "static/js/2.97922a36.chunk.js": "/tandem-code-challenge/static/js/2.97922a36.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.92d1a204.chunk.js": "/tandem-code-challenge/static/js/3.92d1a204.chunk.js",
     "static/js/3.92d1a204.chunk.js.map": "/tandem-code-challenge/static/js/3.92d1a204.chunk.js.map",
     "index.html": "/tandem-code-challenge/index.html",
-    "static/css/main.e5cadfb8.chunk.css.map": "/tandem-code-challenge/static/css/main.e5cadfb8.chunk.css.map",
+    "static/css/main.b2ddf5ea.chunk.css.map": "/tandem-code-challenge/static/css/main.b2ddf5ea.chunk.css.map",
     "static/js/2.97922a36.chunk.js.LICENSE.txt": "/tandem-code-challenge/static/js/2.97922a36.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ad138a47.js",
     "static/js/2.97922a36.chunk.js",
-    "static/css/main.e5cadfb8.chunk.css",
-    "static/js/main.8f48a300.chunk.js"
+    "static/css/main.b2ddf5ea.chunk.css",
+    "static/js/main.51bb9095.chunk.js"
   ]
 }

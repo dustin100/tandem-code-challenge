@@ -4,11 +4,9 @@ import Landing from './components/layout/Landing';
 
 const App = () => {
 	return (
-		<div className='App'>
-			<Header title = 'Dustin Kelly Tandem Code Challenge' />
-			
-				<Landing />
-			
+		<div className='App' data-test='component-app'>
+			<Header title='Dustin Kelly Tandem Code Challenge' />
+			<Landing />
 		</div>
 	);
 };

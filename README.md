@@ -21,17 +21,23 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- Tried adding tests to a project for the first time
+- Learned the importance of TDD
+- Was able to test if components rendered 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Test Improvements 
+- Add PropTypes and test those
+- Test onClick functionality
+- Test helper functions
+- Read more about all the testing methods available   
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### App Improvements 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Pull in more questions from an API
+- Find a better way to restart Quiz
+- Break out Quiz.js into smaller components  
 
-## Goal
+### Goal
 
 Your goal is to create an application that displays trivia questions with multiple-choice answers to select from.
 
@@ -54,3 +60,5 @@ We would also like to see a README which includes any information about how to r
 - A user can select only 1 answer out of the 4 possible answers.
 - The correct answer must be revealed after a user has submitted their answer
 - A user can see the score they received at the end of the round
+
+

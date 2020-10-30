@@ -3,7 +3,7 @@ import Button from '../components/layout/Button';
 import Scoreboard from './ScoreCard';
 import ProgressBar from './progressBar/ProgressBar';
 
-const Quiz = ({ data, getTenQuestion }) => {
+const Quiz = ({ data }) => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [score, setScore] = useState(0);
 	const [userIsCorrect, setUserIsCorrect] = useState(null);
@@ -31,8 +31,7 @@ const Quiz = ({ data, getTenQuestion }) => {
 		}
 	};
 
-	if (currentQuestion > data.length - 1)
-		return <Scoreboard getTenQuestion={getTenQuestion} score={score} />;
+	if (currentQuestion > data.length - 1) return <Scoreboard score={score} />;
 
 	// reveals to the user if they're right or wrong
 	const reveal = userIsCorrect ? (

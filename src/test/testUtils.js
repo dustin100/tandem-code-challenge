@@ -5,8 +5,6 @@
  * @returns {ShallowWrapper}
  */
 
-import { ShallowWrapper } from 'enzyme';
-
 export const findByTestAttr = (wrapper, val) => {
 	return wrapper.find(`[data-test="${val}"]`);
 };

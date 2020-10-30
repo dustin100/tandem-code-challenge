@@ -80,7 +80,7 @@ p i {
 .btn:disabled,
 .btn:disabled:hover {
 	color: #000;
-	opacity: 0.4;
+	opacity: 0.2;
 	cursor: not-allowed;
 	background: #e4f2e4;
 	border-color: #2c4023;
@@ -98,4 +98,18 @@ p i {
 	max-width: 400px;
 	height: 200px;
 	margin: 1rem auto;
+}
+
+.progress-bar {
+	position: relative;
+	height: 10px;
+	width: 100%;
+	border: 1px solid #000;
+}
+
+.filler {
+	background: #869b8d;
+	height: 100%;
+	transition: width 0.2s ease-in;
+	border-radius: 0 5px 5px 0;
 }

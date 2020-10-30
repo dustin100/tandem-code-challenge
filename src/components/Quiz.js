@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import Button from '../components/layout/Button';
 import Scoreboard from './ScoreCard';
+import ProgressBar from './progressBar/ProgressBar'
 
 const Quiz = ({ data, getTenQuestion }) => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -62,6 +63,7 @@ const Quiz = ({ data, getTenQuestion }) => {
 
 	return (
 		<div className='quiz'>
+			<ProgressBar percentage={currentQuestion} />
 			<p className='question'>{data[currentQuestion].question}</p>
 			<div className='choices'>{answersKey}</div>
 			{madeChoice && reveal}

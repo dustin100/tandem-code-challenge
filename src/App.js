@@ -6,9 +6,9 @@ const App = () => {
 	return (
 		<div className='App'>
 			<Header title = 'Dustin Kelly Tandem Code Challenge' />
-			<div className='wrapper'>
+			
 				<Landing />
-			</div>
+			
 		</div>
 	);
 };

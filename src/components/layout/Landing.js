@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import questions from '../../data/questions.json';
 import Button from './Button';
 import Quiz from '../Quiz';
@@ -25,10 +25,9 @@ const Landing = () => {
 		setSwitchView(true);
 	};
 
-	// my shuffle function didn't work that well and I found this one from stack overflow which did a much better job. I modified it slightly for my needs 
-		// https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array/38571132#38571132
-	
-	
+	// my shuffle function didn't work that well and I found this one from stack overflow which did a much better job. I modified it slightly for my needs
+	// https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array/38571132#38571132
+
 	const getRandom = (arr, n) => {
 		let result = new Array(n),
 			len = arr.length,
@@ -42,13 +41,14 @@ const Landing = () => {
 		return result;
 	};
 
-	if (switchView) return <Quiz getTenQuestion={getTenQuestion} data={tenQuestions} />;
+	if (switchView)
+		return <Quiz getTenQuestion={getTenQuestion} data={tenQuestions} />;
 
 	return (
-		<Fragment>
+		<section className='wrapper' data-test='component-landing'>
 			<h2>To get started click button below</h2>
 			<Button text='Get Started' fn={getTenQuestion} />
-		</Fragment>
+		</section>
 	);
 };
 

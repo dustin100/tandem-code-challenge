@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import Button from '../components/layout/Button';
 import Scoreboard from './ScoreCard';
-import ProgressBar from './progressBar/ProgressBar'
+import ProgressBar from './progressBar/ProgressBar';
 
 const Quiz = ({ data, getTenQuestion }) => {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -31,19 +31,20 @@ const Quiz = ({ data, getTenQuestion }) => {
 		}
 	};
 
-	if (currentQuestion > data.length - 1) return <Scoreboard getTenQuestion={getTenQuestion} score={score} />;
+	if (currentQuestion > data.length - 1)
+		return <Scoreboard getTenQuestion={getTenQuestion} score={score} />;
 
 	// reveals to the user if they're right or wrong
 	const reveal = userIsCorrect ? (
 		<Fragment>
 			<p className='correct'>
-				<i class='far fa-check-circle'></i> Correct
+				<i className='far fa-check-circle'></i> Correct
 			</p>
 		</Fragment>
 	) : (
 		<Fragment>
 			<p className='incorrect'>
-				<i class='far fa-times-circle'></i>
+				<i className='far fa-times-circle'></i>
 				{data[currentQuestion].correct}
 			</p>
 		</Fragment>
@@ -62,13 +63,15 @@ const Quiz = ({ data, getTenQuestion }) => {
 	});
 
 	return (
-		<div className='quiz'>
+		<Fragment>
 			<ProgressBar percentage={currentQuestion} />
-			<p className='question'>{data[currentQuestion].question}</p>
-			<div className='choices'>{answersKey}</div>
-			{madeChoice && reveal}
-			<Button text='next question' disabled={!madeChoice} fn={nextQuestion} />
-		</div>
+			<div className='quiz wrapper'>
+				<p className='question'>{data[currentQuestion].question}</p>
+				<div className='choices'>{answersKey}</div>
+				{madeChoice && reveal}
+				<Button text='next question' disabled={!madeChoice} fn={nextQuestion} />
+			</div>
+		</Fragment>
 	);
 };
 

@@ -43,6 +43,7 @@ p i {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 1.5rem;
 }
 .correct {
 	color: green;
@@ -50,7 +51,6 @@ p i {
 
 .incorrect {
 	color: red;
-	margin: 0.3rem 0;
 }
 
 .btn {

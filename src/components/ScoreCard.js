@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Button from '../components/layout/Button';
+
 const Scoreboard = ({ score }) => {
 	const [text, setText] = useState(null);
 	useEffect(() => {
